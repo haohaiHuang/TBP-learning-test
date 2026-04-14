@@ -1,57 +1,65 @@
-# React + TypeScript + Vite
+# TBP Learning Platform (Toyota Business Process)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mobile-first Web Application designed for systematic learning and practical application of the Toyota Business Process (TBP). This platform breaks down complex management philosophies into interactive learning modules, knowledge tests, and domain-specific practical case studies.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Structured Learning Modules
+- **10 Core Consciences (十大基本意识)**: Detailed explanations of foundational principles like "Customer First," "Ownership," and "5 Whys."
+- **8-Step Problem Solving Process (八步问题解决流程)**: Step-by-step guidance from defining the problem to standardizing successful countermeasures.
+- **Rich Case Studies**: Every theoretical concept is paired with real-world business scenarios to ensure practical understanding.
 
-## Expanding the ESLint configuration
+### 2. Independent Assessment System
+- **Module-Specific Quizzes**: Each concept (e.g., "Visualization") concludes with an independent quiz to reinforce learning immediately.
+- **Progress Tracking**: Visual indicators tracking completion status across all 18 core concepts.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 3. Comprehensive Testing (综合测试)
+Divided into two major types and three professional domains (Factory, Management, Sales):
+- **Knowledge Test (知识检测)**: A 10-question mixed quiz evaluating theoretical mastery across both Core Consciences and the 8-Step Process.
+- **Practical Application (实战应用)**: Immersive, multi-step virtual case studies where users act as the "person-in-charge" to resolve complex business issues using the 8-Step framework.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 4. UI/UX Design
+- **Mobile-First Approach**: Optimized for H5 web rendering (375px-428px width), maintaining a centered mobile view on desktop browsers.
+- **Clean & Professional Interface**: Utilizing a cohesive color palette (Primary Blue, Success Green, Warning Orange) and smooth `framer-motion` page transitions.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Framework**: React 18
+- **Build Tool**: Vite
+- **Styling**: TailwindCSS
+- **Routing**: React Router v6
+- **State Management**: Zustand (with local storage persistence)
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
 
-export default tseslint.config({
-  extends: [
-    // other configs...
-    // Enable lint rules for React
-    reactX.configs['recommended-typescript'],
-    // Enable lint rules for React DOM
-    reactDom.configs.recommended,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📦 Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/tbp-learning-platform.git
+   cd tbp-learning-platform
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   The app will be running at `http://localhost:5173`.
+
+## 🌐 Deployment (Vercel)
+
+This project is pre-configured for seamless deployment on Vercel. A `vercel.json` file is included to handle React Router's client-side routing.
+
+1. Push your code to a GitHub repository.
+2. Log in to [Vercel](https://vercel.com/) and click **Add New... > Project**.
+3. Import your GitHub repository.
+4. Click **Deploy**. Vercel will automatically detect Vite and configure the build settings.
+
+## 📄 License
+
+This project is licensed under the MIT License.
